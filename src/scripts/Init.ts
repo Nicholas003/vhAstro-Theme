@@ -30,9 +30,9 @@ import initMobileSidebar from "../scripts/MobileSidebar";
 // Google 广告
 import GoogleAdInit from "../scripts/GoogleAd";
 // Han Analytics 统计
-import SITE_INFO from "../config";
-const { HanAnalytics, LenisScroll } = SITE_INFO;
-import { LoadScript } from "../utils/index";
+import HanAnalyticsInit from "../scripts/HanAnalytics";
+// SmoothScroll 滚动优化
+import SmoothScroll from "../scripts/Smoothscroll";
 
 // ============================================================
 
@@ -40,8 +40,6 @@ import { LoadScript } from "../utils/index";
 const videoList: any[] = [];
 const MusicList: any[] = [];
 const indexInit = async (only: boolean = true) => {
-  // 鼠标滚动阻尼效果
-  LenisScroll && only && (await import('./Lenis')).default();
   // 预加载搜索数据
   only && searchFn("");
   // 初始化搜索功能
