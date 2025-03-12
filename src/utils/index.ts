@@ -11,7 +11,7 @@ const getDescription = (post: any, num: number = 150) => (post.rendered ? post.r
 //处理时间
 const fmtTime = (time: any, fmt: string = 'MMMM D, YYYY') => dayjs(time).utc().format(fmt)
 // 处理日期
-const fmtDate = (time: string | Date) => {
+const fmtDate = (time: string | Date, hours_status = true) => {
   const now = dayjs();
   const past = dayjs(time);
   // 计算各时间单位，逐步扣除已计算的部分
@@ -31,9 +31,9 @@ const fmtDate = (time: string | Date) => {
     years && `${years}年`,
     months && `${months}月`,
     days && `${days}天`,
-    hours && !years && !months && `${hours}小时`,
-    minutes && !years && !months && !days && `${minutes}分`,
-    seconds && !years && !months && !days && !hours && `${seconds}秒`
+    hours_status ? hours && !years && !months && `${hours}小时` : 0,
+    hours_status ? minutes && !years && !months && !days && `${minutes}分` : '',
+    hours_status ? seconds && !years && !months && !days && !hours && `${seconds}秒` : ''
   ].filter(Boolean).join('');
 };
 

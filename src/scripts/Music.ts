@@ -4,7 +4,6 @@ import { $GET } from '../utils/index'
 import 'aplayer/dist/APlayer.min.css';
 import APlayer from 'aplayer';
 
-declare const APlayer: any;
 // 初始化音乐播放器
 export default async (MusicList: any[]) => {
   const musicDOM: any = document.querySelectorAll(".vh-node.vh-vhMusic");

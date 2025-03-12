@@ -11,7 +11,7 @@ const FriendsInit = async (data: any) => {
 		if (typeof data === 'string') {
 			res = await $GET(api);
 		}
-		friendsDOM.innerHTML = res.map((i: any) => `<article><a href="${i.link}" target="_blank" rel="noopener nofollow"><header><h2>${i.title}</h2></header><p>${i.content}</p><footer><span><img src="https://icon.bqb.cool/?url=${i.link.split('//')[1].split('/')[0]}" />${i.auther}</span><time>${fmtDate(i.date)}前</time></footer></a></article>`).join('');
+		friendsDOM.innerHTML = res.map((i: any) => `<article><a href="${i.link}" target="_blank" rel="noopener nofollow"><header><h2>${i.title}</h2></header><p>${i.content}</p><footer><span><img src="https://icon.bqb.cool/?url=${i.link.split('//')[1].split('/')[0]}" /><em>${i.auther}</em></span><time>${fmtDate(i.date, false)}前</time></footer></a></article>`).join('');
 	} catch {
 		vh.Toast('获取数据失败')
 	}

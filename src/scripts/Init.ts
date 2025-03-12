@@ -50,6 +50,8 @@ const indexInit = async (only: boolean = true) => {
   only && BackTopInitFn();
   // 移动端侧边栏初始化
   only && initMobileSidebar();
+  // SmoothScroll 滚动优化
+  only && SmoothScroll();
   // 顶部导航 Current 状态
   initLinkCurrent()
   // 初始化文章代码块
@@ -66,12 +68,12 @@ const indexInit = async (only: boolean = true) => {
   initTalking();
   // Google 广告
   GoogleAdInit();
+  // Han Analytics 统计
+  HanAnalyticsInit();
   // 文章视频播放器初始化
   videoInit(videoList);
   // 文章音乐播放器初始化
   musicInit(MusicList);
-  // Han Analytics 统计
-  HanAnalytics.enable && LoadScript(`${HanAnalytics.server}/tracker.min.js`, [{ k: "data-website-id", v: HanAnalytics.siteId }]);
 };
 
 export default () => {
