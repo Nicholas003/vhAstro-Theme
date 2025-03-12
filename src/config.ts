@@ -48,8 +48,6 @@ export default {
     // 侧边栏广告(不填不开启)
     asideAD_Slot: '',
     // 文章页广告(不填不开启)
-    articleAD_Slot: ''
-  },
-  // 阻尼滚动效果开关
-  LenisScroll: false
+    articleAD_Slot: `<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-xxxxxx" data-ad-slot="xxxxxx" data-ad-format="auto" data-full-width-responsive="true"></ins>`
+  }
 }
