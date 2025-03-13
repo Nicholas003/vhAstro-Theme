@@ -3,4 +3,4 @@ Disallow: /MineWeb/
 Disallow: /assets/
 Disallow: /*?*
 
-Sitemap: https://www.vvhan.com/sitemap-index.xml
+Sitemap: http://blog.800800.top/sitemap-index.xml
