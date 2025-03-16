@@ -11,6 +11,7 @@ import rehypeKatex from "rehype-katex";
 import remarkDirective from "remark-directive";
 import { remarkNote, addClassNames } from './src/plugins/markdown.custom'
 // Markdown 配置================
+import SITE_INFO from './src/config';
 import swup from '@swup/astro';
 
 const {VITE_BASE_URL} = loadEnv(process.env.NODE_ENV, process.cwd(), "");
