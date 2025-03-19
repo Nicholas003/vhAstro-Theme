@@ -187,3 +187,7 @@ hide: false # 是否隐藏文章
 ## ✨ 反馈和建议
 
 如果您有任何建议/反馈，您可以通过我的 [电子邮件](mailto:1655466387@qq.com) 联系我。或者，如果您发现错误或想要请求新功能，请随时打开问题。
+
+## Stargazers over time
+
+![Stargazers over time](https://starchart.cc/uxiaohan/vhAstro-Theme.svg?variant=adaptive)
