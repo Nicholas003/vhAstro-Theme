@@ -22,6 +22,7 @@
 - [x] 语法高亮
 - [x] 图片懒加载
 - [x] 图片灯箱
+- [x] 支持 LivePhoto
 - [x] LaTex数学公式
 - [x] Twikoo 评论
 - [x] 本地搜索
