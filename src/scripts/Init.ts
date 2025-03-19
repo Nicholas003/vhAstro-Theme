@@ -5,6 +5,8 @@ import codeInit from "../scripts/Code";
 import videoInit from "../scripts/Video";
 // 初始化音乐播放器
 import musicInit from "../scripts/Music";
+// 初始化 LivePhoto
+import livePhotoInit from './LivePhoto'
 // 初始化BackTop组件
 import BackTopInitFn from "../scripts/BackTop";
 // 搜索
@@ -74,6 +76,8 @@ const indexInit = async (only: boolean = true) => {
   videoInit(videoList);
   // 文章音乐播放器初始化
   musicInit(MusicList);
+  // 初始化 LivePhoto
+  livePhotoInit();
 };
 
 export default () => {
