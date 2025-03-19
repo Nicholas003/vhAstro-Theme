@@ -31,7 +31,7 @@ const fmtDate = (time: string | Date, hours_status = true) => {
     years && `${years}年`,
     months && `${months}月`,
     days && `${days}天`,
-    hours_status ? hours && !years && !months && `${hours}小时` : 0,
+    (hours_status || days === 0) ? hours && !years && !months && `${hours}小时` : 0,
     hours_status ? minutes && !years && !months && !days && `${minutes}分` : '',
     hours_status ? seconds && !years && !months && !days && !hours && `${seconds}秒` : ''
   ].filter(Boolean).join('');
