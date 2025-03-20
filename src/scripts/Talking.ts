@@ -10,7 +10,7 @@ declare const ViewImage: any;
 // 灯箱JS初始化======
 
 const TalkingInit = async (data: any) => {
-  const talkingDOM = document.querySelector('.vh-container>.vh-talking>main')
+  const talkingDOM = document.querySelector('.vh-container>.vh-tools-main>main.talking-main')
   if (!talkingDOM) return;
   try {
     let res = data;
@@ -21,7 +21,7 @@ const TalkingInit = async (data: any) => {
     // 图片懒加载
     vhLzImgInit();
     // 灯箱JS初始化======
-    setTimeout(() => (ViewImage && ViewImage.init(".vh-talking>main>article>.main img, .vh-comment>.twikoo>.tk-comments img:not(.tk-avatar-img,.tk-owo-emotion,.OwO-item img)")));
+    setTimeout(() => (ViewImage && ViewImage.init("main.talking-main>article>.main img, .vh-comment>.twikoo>.tk-comments img:not(.tk-avatar-img,.tk-owo-emotion,.OwO-item img)")));
     // 灯箱JS初始化======
   } catch {
     vh.Toast('获取数据失败')

@@ -8,7 +8,7 @@ declare const twikoo: any;
 // 处理评论区数据
 const formateComment = () => {
   // 图片灯箱
-  ViewImage && ViewImage.init(".vh-container>article.vh-article-main img.vh-article-img, .vh-talking>main>article>.main img, .vh-comment>.twikoo>.tk-comments img:not(.tk-avatar-img,.tk-owo-emotion,.OwO-item img)");
+  ViewImage && ViewImage.init(".vh-container>article.vh-article-main img.vh-article-img, main.talking-main>article>.main img, .vh-comment>.twikoo>.tk-comments img:not(.tk-avatar-img,.tk-owo-emotion,.OwO-item img)");
   // 处理 URL
   document.querySelectorAll('.vh-comment a[href="#"]').forEach(link => link.removeAttribute('href'));
 }

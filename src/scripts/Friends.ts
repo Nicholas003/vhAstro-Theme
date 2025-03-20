@@ -4,7 +4,7 @@ import { fmtDate } from '../utils/index'
 import { $GET } from '../utils/index'
 
 const FriendsInit = async (data: any) => {
-	const friendsDOM = document.querySelector('.vh-container>.vh-friends>main')
+	const friendsDOM = document.querySelector('.vh-container>.vh-tools-main>main.friends-main')
 	if (!friendsDOM) return;
 	try {
 		let res = data;
