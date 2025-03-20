@@ -1,5 +1,5 @@
 ---
-import { getDescription, fmtTime } from "../../utils/index";
+import { getDescription, fmtTime } from "@/utils/index";
 import { type CollectionEntry, getCollection } from "astro:content";
 import { render } from "astro:content";
 export async function getStaticPaths() {
@@ -10,10 +10,10 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<"blog">;
 const post: any = Astro.props;
 // 获取封面图
-import getCover from "../../utils/getCover";
+import getCover from "@/utils/getCover";
 const ARTICLE_COVER: string = await getCover(post.data.cover);
 // 页面 Info
-import SITE_CONFIG from "../../config";
+import SITE_CONFIG from "@/config";
 const { Site, Title, Author, Twikoo, GoogleAds } = SITE_CONFIG;
 // 处理文章内容
 const description = getDescription(post);
@@ -21,19 +21,21 @@ const { Content, remarkPluginFrontmatter } = await render(post);
 // 文章字数和阅读时间
 const { reading_time, article_word_count } = remarkPluginFrontmatter;
 // 公共 Layout
-import Layout from "../../layouts/Layout.astro";
+import Layout from "@/layouts/Layout/Layout.astro";
 // Aside组件
-import Aside from "../../components/Aside.astro";
-// Footer 组件
-import Copyright from "../../components/Copyright.astro";
+import Aside from "@/components/Aside/Aside.astro";
+// Copyright 组件
+import Copyright from "@/components/Copyright/Copyright.astro";
+// Reward 组件
+import Reward from "@/components/Reward/Reward.astro";
 // 评论组件
-import Comment from "../../components/Comment.astro";
+import Comment from "@/components/Comment/Comment.astro";
 // Google 广告组件
-import GoogleAd from "../../components/GoogleAd.astro";
+import GoogleAd from "@/components/GoogleAd/GoogleAd.astro";
 // 文章页面样式
-import "../../styles/Article.less";
+import "@/styles/Article.less";
 // 文章内容基础样式
-import "../../styles/ArticleBase.less";
+import "@/styles/ArticleBase.less";
 ---
 
 <Layout title={post.data.title} keywords={post.data.tags} description={description} pagecover={ARTICLE_COVER}>
@@ -61,9 +63,12 @@ import "../../styles/ArticleBase.less";
 				</nav>
 			</main>
 			<footer>
+				<!-- 打赏组件 -->
+				<Reward />
+				<!-- 版权©️信息 -->
+				<Copyright site={Site} id={post.data.id} title={post.data.title} sitename={Title} time={fmtTime(post.data.date, "YYYY-MM-DD A")} auther={Author} />
 				<!-- 底部谷歌广告 -->
 				{GoogleAds.ad_Client && GoogleAds.articleAD_Slot && <GoogleAd className="vh-article-ad" slotID={GoogleAds.articleAD_Slot} />}
-				<Copyright site={Site} id={post.data.id} title={post.data.title} sitename={Title} time={fmtTime(post.data.date, "YYYY-MM-DD A")} auther={Author} />
 			</footer>
 			{Twikoo.envId && <Comment envId={Twikoo.envId} />}
 		</article>

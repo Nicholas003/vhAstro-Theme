@@ -1,8 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import type { GetStaticPathsOptions } from "astro";
-import setSearchJson from "../utils/vhSearch";
-import moveTopToFirst from "../utils/moveTopToFirst";
+import setSearchJson from "@/utils/vhSearch";
+import moveTopToFirst from "@/utils/moveTopToFirst";
 export async function getStaticPaths(options: GetStaticPathsOptions) {
 	const { paginate } = options;
 	const posts = (await getCollection("blog")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
@@ -20,16 +20,16 @@ export async function getStaticPaths(options: GetStaticPathsOptions) {
 const { page } = Astro.props;
 const { data, ...page_data } = page;
 // 页面 Info
-import SITE_CONFIG from "../config";
+import SITE_CONFIG from "@/config";
 const { Description } = SITE_CONFIG;
 // 博客列表组件
-import ArticleCard from "../components/ArticleCard.astro";
+import ArticleCard from "@/components/ArticleCard/ArticleCard.astro";
 // 公共 Layout
-import Layout from "../layouts/Layout.astro";
+import Layout from "@/layouts/Layout/Layout.astro";
 // Aside组件
-import Aside from "../components/Aside.astro";
+import Aside from "@/components/Aside/Aside.astro";
 // 分页组件
-import Pagination from "../components/Pagination.astro";
+import Pagination from "@/components/Pagination/Pagination.astro";
 const currentPage = page_data.url.current.replace("/", "");
 ---
 

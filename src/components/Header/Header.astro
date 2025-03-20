@@ -1,12 +1,12 @@
 ---
-import SITE_CONFIG from "../config";
+import SITE_CONFIG from "@/config";
 const { Navs } = SITE_CONFIG;
 // 原生图片
 import { Image } from "astro:assets";
 // 搜索框组件
-import Search from "./Search.astro";
+import Search from "@/components/Search/Search.astro";
 // 顶部 Header 样式
-import "../styles/components/Header.less";
+import "./Header.less";
 ---
 
 <header class="vh-header">

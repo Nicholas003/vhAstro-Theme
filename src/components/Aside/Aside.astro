@@ -2,12 +2,12 @@
 // 静态图片
 import { Image } from "astro:assets";
 // 时间处理
-import { fmtTime } from "../utils/index";
+import { fmtTime } from "@/utils/index";
 // 获取用户配置数据
-import SITE_CONFIG from "../config";
+import SITE_CONFIG from "@/config";
 const { Avatar, Author, Motto, WebSites, GoogleAds } = SITE_CONFIG;
 // 获取文章数据
-import { getCategories, getTags, getRecommendArticles } from "../utils/getPostInfo";
+import { getCategories, getTags, getRecommendArticles } from "@/utils/getPostInfo";
 // 分类列表
 const categories = getCategories();
 // 热门标签
@@ -15,9 +15,9 @@ const tags = getTags();
 // 最新文章
 const recommendArticles = getRecommendArticles();
 // Google 广告组件
-import GoogleAd from "../components/GoogleAd.astro";
+import GoogleAd from "@/components/GoogleAd/GoogleAd.astro";
 // 侧边栏样式
-import "../styles/components/Aside.less";
+import "./Aside.less";
 ---
 
 <aside class="vh-aside">

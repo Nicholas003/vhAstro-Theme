@@ -1,7 +1,7 @@
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
-import { getDescription } from '../utils/index'
-import SITE_CONFIG from '../config';
+import { getDescription } from '@/utils/index'
+import SITE_CONFIG from '@/config';
 const { Title, Description } = SITE_CONFIG;
 
 

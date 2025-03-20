@@ -5,7 +5,7 @@ declare global {
     adsbygoogle: any[];
   }
 }
-import SITE_INFO from '../config'
+import SITE_INFO from '@/config'
 const { GoogleAds } = SITE_INFO
 export default () => {
   const asideAD: any = document.querySelector('.vh-aside-ad')

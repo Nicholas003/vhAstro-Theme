@@ -2,11 +2,12 @@
 title: "关于"
 h1: "关于我"
 desc: "Hi there, I’m Han 👋"
-layout: "../../layouts/PageLayout.astro"
+layout: "@/layouts/PageLayout/PageLayout.astro"
 ---
 
-:::note{type="info"}
+:::note{type="success"}
 我是一名热爱前端开发并拥有丰富经验的工程师，喜欢探索新技术并应用于实际项目中。
+
 我始终保持对新技术的热情，并将我的知识与经验分享在我的博客中。我期待在这里与你分享我的见解、经验和最新的技术动态。
 :::
 

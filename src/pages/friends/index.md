@@ -2,7 +2,7 @@
 title: "朋友的新动态"
 h1: "朋友的新动态 🎴"
 desc: "来看看我的朋友们都在干嘛."
-layout: "../../layouts/ToolLayout.astro"
+layout: "@/layouts/ToolLayout/ToolLayout.astro"
 type: "friends"
 ---
 

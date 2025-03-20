@@ -1,6 +1,6 @@
 import { getCollection } from "astro:content";
 // 获取封面图
-import getCover from "../utils/getCover";
+import getCover from "@/utils/getCover";
 const posts = (await getCollection("blog")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 // 获取文章分类
 const getCategories = () => {

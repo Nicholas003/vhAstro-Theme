@@ -1,38 +1,38 @@
-import { inRouter, outRouter } from "../utils/updateRouter";
+import { inRouter, outRouter } from "@/utils/updateRouter";
 // 初始化文章代码块
-import codeInit from "../scripts/Code";
+import codeInit from "@/scripts/Code";
 // 初始化视频播放器
-import videoInit from "../scripts/Video";
+import videoInit from "@/scripts/Video";
 // 初始化音乐播放器
-import musicInit from "../scripts/Music";
+import musicInit from "@/scripts/Music";
 // 初始化 LivePhoto
-import livePhotoInit from './LivePhoto'
+import livePhotoInit from '@/scripts/LivePhoto'
 // 初始化BackTop组件
-import BackTopInitFn from "../scripts/BackTop";
+import BackTopInitFn from "@/scripts/BackTop";
 // 搜索
-import { searchFn, vhSearchInit } from "../scripts/Search";
+import { searchFn, vhSearchInit } from "@/scripts/Search";
 // 图片懒加载
-import vhLzImgInit from "../scripts/vhLazyImg";
+import vhLzImgInit from "@/scripts/vhLazyImg";
 // 顶部导航 Current 状态
-import initLinkCurrent from "../scripts/Header";
+import initLinkCurrent from "@/scripts/Header";
 // 底部网站运行时间
-import initWebSiteTime from "../scripts/Footer";
+import initWebSiteTime from "@/scripts/Footer";
 // 友情链接初始化
-import initLinks from "../scripts/Links";
+import initLinks from "@/scripts/Links";
 // 朋友圈 RSS 初始化
-import initFriends from "../scripts/Friends";
+import initFriends from "@/scripts/Friends";
 // 动态说说初始化
-import initTalking from "../scripts/Talking";
+import initTalking from "@/scripts/Talking";
 // 文章评论初始化
-import initComment from "../scripts/Comment";
+import initComment from "@/scripts/Comment";
 // 移动端侧边栏初始化
-import initMobileSidebar from "../scripts/MobileSidebar";
+import initMobileSidebar from "@/scripts/MobileSidebar";
 // Google 广告
-import GoogleAdInit from "../scripts/GoogleAd";
+import GoogleAdInit from "@/scripts/GoogleAd";
 // Han Analytics 统计
-import HanAnalyticsInit from "../scripts/HanAnalytics";
+import HanAnalyticsInit from "@/scripts/HanAnalytics";
 // SmoothScroll 滚动优化
-import SmoothScroll from "../scripts/Smoothscroll";
+import SmoothScroll from "@/scripts/Smoothscroll";
 
 // ============================================================
 

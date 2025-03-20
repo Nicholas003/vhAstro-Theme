@@ -37,7 +37,7 @@ export default {
     'https://npm.elemecdn.com'
   ],
   // 博客音乐组件解析接口
-  vhMusicApi: 'https://meting-dd.2333332.xyz/api',
+  vhMusicApi: 'https://music.zhheo.com/meting-api/',
   // 评论组件 Twikoo
   Twikoo: { envId: '' },
   // Han Analytics 统计（https://github.com/uxiaohan/HanAnalytics）
@@ -49,5 +49,12 @@ export default {
     asideAD_Slot: '',
     // 文章页广告(不填不开启)
     articleAD_Slot: `<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-xxxxxx" data-ad-slot="xxxxxx" data-ad-format="auto" data-full-width-responsive="true"></ins>`
+  },
+  // 文章内赞赏码
+  Reward: {
+    // 支付宝收款码
+    AliPay: '/assets/images/alipay.webp',
+    // 微信收款码
+    WeChat: '/assets/images/wechat.webp'
   }
 }

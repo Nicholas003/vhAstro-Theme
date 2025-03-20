@@ -1,7 +1,7 @@
 import vh from 'vh-plugin'
-import { $GET } from '../utils/index'
+import { $GET } from '@/utils/index'
 // 图片懒加载
-import vhLzImgInit from "../scripts/vhLazyImg";
+import vhLzImgInit from "@/scripts/vhLazyImg";
 // 渲染
 const LinksInit = async (data: any) => {
   const linksDOM = document.querySelector('.vh-container>.vh-tools-main>main.links-main')
@@ -20,6 +20,6 @@ const LinksInit = async (data: any) => {
 }
 
 // 友情链接初始化
-import LINKS_DATA from "../page_data/Link";
+import LINKS_DATA from "@/page_data/Link";
 const { api, data } = LINKS_DATA;
 export default () => LinksInit(api || data)

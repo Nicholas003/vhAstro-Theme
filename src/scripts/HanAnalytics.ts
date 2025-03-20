@@ -1,7 +1,7 @@
 
 // Han Analytics 统计
-import SITE_INFO from "../config";
-import { LoadScript } from "../utils/index";
+import SITE_INFO from "@/config";
+import { LoadScript } from "@/utils/index";
 
 export default async () => {
   const { HanAnalytics } = SITE_INFO;

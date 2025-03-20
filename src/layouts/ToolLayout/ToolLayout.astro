@@ -1,18 +1,18 @@
 ---
 const { frontmatter } = Astro.props;
 // 页面 Info
-import SITE_CONFIG from "../config";
+import SITE_CONFIG from "@/config";
 const { Description, Twikoo, Title } = SITE_CONFIG;
 // Aside组件
-import Aside from "../components/Aside.astro";
+import Aside from "@/components/Aside/Aside.astro";
 // 公共 Layout
-import Layout from "../layouts/Layout.astro";
+import Layout from "@/layouts/Layout/Layout.astro";
 // 评论组件
-import Comment from "../components/Comment.astro";
+import Comment from "@/components/Comment/Comment.astro";
 // ToolLayout 布局样式
-import "../styles/ToolLayout.less";
+import "./ToolLayout.less";
 // 文章内容基础样式
-import "../styles/ArticleBase.less";
+import "@/styles/ArticleBase.less";
 ---
 
 <Layout title={frontmatter.title || Title} description={Description}>

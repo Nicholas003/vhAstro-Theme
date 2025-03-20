@@ -1,8 +1,8 @@
-import SITE_INFO from "../config";
+import SITE_INFO from "@/config";
 // 图片灯箱
-import "../../public/assets/js/view-image.min.js";
+import "@public/assets/js/view-image.min.js";
 declare const ViewImage: any;
-import { LoadScript } from "../utils/index";
+import { LoadScript } from "@/utils/index";
 declare const twikoo: any;
 
 // 处理评论区数据

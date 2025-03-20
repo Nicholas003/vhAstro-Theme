@@ -2,7 +2,7 @@ import path from 'path';
 import _fs from 'fs';
 const fs = _fs.promises;
 import { fileURLToPath } from 'url';
-import SITE_INFO from '../config';
+import SITE_INFO from '@/config';
 // 获取当前模块的目录路径
 const __filename = fileURLToPath(import.meta.url); // 当前文件的绝对路径
 const __dirname = path.dirname(__filename); // 当前文件所在的目录
