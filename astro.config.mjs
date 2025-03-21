@@ -15,12 +15,12 @@ import { remarkNote, addClassNames } from './src/plugins/markdown.custom'
 import SITE_INFO from './src/config';
 import swup from '@swup/astro';
 
-const {VITE_BASE_URL} = loadEnv(process.env.NODE_ENV, process.cwd(), "");
+// const {VITE_BASE_URL} = loadEnv(process.env.NODE_ENV, process.cwd(), "");
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'http://blog.800800.top',
-	base: VITE_BASE_URL,
+	// base: VITE_BASE_URL,
 	integrations: [
 		swup({
 			theme: false,
