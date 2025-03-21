@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "include": [
+    "/_server-islands/*"
+  ],
+  "exclude": [
+    "/",
+    "/_astro/*",
+    "/.nojekyll",
+    "/baidu_verify_codeva-o7w5PhH3Ns.html",
+    "/favicon.ico",
+    "/vh-search.json",
+    "/assets/*",
+    "/robots.txt",
+    "/rss.xml",
+    "/404",
+    "/about",
+    "/archives",
+    "/article/*",
+    "/categories/*",
+    "/friends",
+    "/links",
+    "/message",
+    "/tag/*",
+    "/talking"
+  ]
+}
