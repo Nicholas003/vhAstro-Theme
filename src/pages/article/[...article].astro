@@ -47,8 +47,8 @@ import "@/styles/ArticleBase.less";
 					<span class="article-meta-item">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> <path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L64 64C28.7 64 0 92.7 0 128l0 16 0 48L0 448c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-256 0-48 0-16c0-35.3-28.7-64-64-64l-40 0 0-40c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L152 64l0-40zM48 192l80 0 0 56-80 0 0-56zm0 104l80 0 0 64-80 0 0-64zm128 0l96 0 0 64-96 0 0-64zm144 0l80 0 0 64-80 0 0-64zm80-48l-80 0 0-56 80 0 0 56zm0 160l0 40c0 8.8-7.2 16-16 16l-64 0 0-56 80 0zm-128 0l0 56-96 0 0-56 96 0zm-144 0l0 56-64 0c-8.8 0-16-7.2-16-16l0-40 80 0zM272 248l-96 0 0-56 96 0 0 56z"></path></svg>
 						<time>{fmtTime(post.data.date, "YYYY-MM-DD A")}</time>
-						<span class="count"><strong>{article_word_count}</strong>字</span>
-						<span class="time"><strong>{parseFloat((Number(reading_time) || 0).toFixed(1).replace(/\.0+$/, ""))}</strong>分钟</span>
+						<!-- <span class="count"><strong>{article_word_count}</strong>字</span> -->
+						<!-- <span class="time"><strong>{parseFloat((Number(reading_time) || 0).toFixed(1).replace(/\.0+$/, ""))}</strong>分钟</span> -->
 					</span>
 					<a class="article-meta-item" href={`${import.meta.env.VITE_BASE_URL}/categories/${post.data.categories}`}>
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <path d="M40 48C26.7 48 16 58.7 16 72l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24L40 48zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L192 64zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-288 0zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-288 0zM16 232l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-48 0c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-48 0z"></path></svg>
