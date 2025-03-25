@@ -14,7 +14,7 @@ if (!articleName) {
 }
 const ArticleContent = `---
 title: "${articleName.replace(/"/g, '\\"')}"
-categories: 分类
+categories: 积累
 tags:
   - 标签
 id: "${articleID.slice(0, 16)}"

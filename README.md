@@ -170,7 +170,7 @@ export default {
 ```md
 ---
 title: 标题
-categories: 分类
+categories: 积累
 tags:
   - 标签1
   - 标签2

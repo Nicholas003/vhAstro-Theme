@@ -1,11 +1,12 @@
 ---
 title: "super-push安装教程"
-categories: 分类
+categories: 积累
 tags:
   - 标签
 id: "ac2c9c1cf59f8be9"
 date: 2025-03-23 12:14:11
-cover: ""
+cover: "https://wp-cdn.4ce.cn/v2/qDBT3i6.png"
+recommend: true
 ---
 
 #### 基于vue3+cloudflare workers+web-push的一个开源私有的推送应用

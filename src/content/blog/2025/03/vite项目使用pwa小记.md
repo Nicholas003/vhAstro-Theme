@@ -1,6 +1,6 @@
 ---
 title: "vite项目使用pwa小记"
-categories: 分类
+categories: 积累
 tags:
   - 标签
 id: "cdbde6d2aefa95d5"

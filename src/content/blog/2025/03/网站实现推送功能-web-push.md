@@ -1,6 +1,6 @@
 ---
 title: "网站实现推送功能-web-push"
-categories: 分类
+categories: 积累
 tags:
   - 标签
 id: "bd62f0edd786cd78"

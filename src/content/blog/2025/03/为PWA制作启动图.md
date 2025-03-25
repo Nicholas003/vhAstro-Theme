@@ -1,6 +1,6 @@
 ---
 title: "为PWA制作启动图"
-categories: 分类
+categories: 积累
 tags:
   - 标签
 id: "d9e02f2f7a53f5b1"
