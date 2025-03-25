@@ -16,12 +16,15 @@ cover: ""
 git clone https://github.com/Nicholas003/super-push.git
 # 进入项目目录
 cd super-push
+```
+
+``` bash
 # 安装依赖
-yarn install
-# 执行sql 这是本地
-npx wrangler d1 execute super-push --local --file=./schema.sql
-# 这是推到cloudflare
-npx wrangler d1 execute super-push --remote --file=./schema.sql
+yarn
+```
+```bash
+##创建数据库
+npx wrangler d1 create super-push
 # 把返回值放到wrangler.jsonc中
 # "d1_databases": [
 # 		{
@@ -31,20 +34,44 @@ npx wrangler d1 execute super-push --remote --file=./schema.sql
 # 		}
 # 	],
 
+# 数据库推到cloudflare
+npx wrangler d1 execute super-push --remote --file=./schema.sql
+# 执行sql 这是本地调试用的
+npx wrangler d1 execute super-push --local --file=./schema.sql
+
+
 ```
 #### 配置秘钥
 
-.dev.vars.example 重命名为 .dev.vars
 [生成公钥私钥](https://web-push-codelab.glitch.me/)
-放里面
 
-### 执行一下 
+``` bash
+.dev.vars.example 重命名为 .dev.vars
+## 上面网站的东西放在文件里，本地调试用
+# 执行下面命令 给cloudflare添加秘钥
+npx wrangler secret put publicKey
+npx wrangler secret put privateKey
+
+```
+### 最后执行一下 
 ``` bash
 yarn deploy
 ```
-应该就可以了
 
 ---
 
 API参数
+
+
+|  参数名   | 解释  |
+|  ----  | ----  |
+| title  | 通知标题 非必填 |
+| body  | 通知内容 非必填 |
+|  data | 数据 非必填 |
+| icon  | 图标 非必填 |
+| redirect_uri  | 请求后重定向的地址 非必填 |
+
+https://workers.dev/api/push/092475192834fd77ff9ab67b332dac06?title=hello&body=world&data=hello-world&icon=https%3A%2F%2Fwp-cdn.4ce.cn%2Fv2%2FL5Hcdwr.png&redirect_uri=
+
+get或者post请求都可以
 
