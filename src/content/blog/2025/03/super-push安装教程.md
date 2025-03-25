@@ -8,7 +8,9 @@ date: 2025-03-23 12:14:11
 cover: ""
 ---
 
-#### 基于vue3+赛博菩萨+web-push的一个开源私有的推送应用
+#### 基于vue3+cloudflare workers+web-push的一个开源私有的推送应用
+
+![WechatIMG2413.png](https://wp-cdn.4ce.cn/v2/qDBT3i6.png)
 
 #### 安装教程
 ``` bash
@@ -75,3 +77,21 @@ https://workers.dev/api/push/092475192834fd77ff9ab67b332dac06?title=hello&body=w
 
 get或者post请求都可以
 
+如果cloudflare关联了git 需要在构架时添加 YARN_VERSION=1 NODE_VERSION=20.18.3
+
+### 使用教程 
+
+#### PC
+建议使用Edge浏览器 Chrome会被墙
+可以添加到桌面也可以不添加
+然后开启推送
+#### IOS
+使用Safari浏览器
+把应用添加到主屏幕
+然后开启推送
+#### Android
+没试过
+
+---
+
+如果项目对你有帮助，欢迎star和fork
