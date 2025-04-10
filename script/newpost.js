@@ -6,7 +6,9 @@ import { promises as fs } from 'fs';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // 获取命令行参数
-const articleName = process.argv.slice(2).join('');
+console.log(process.argv)
+const articleName = process.argv.at(2);
+const articleContent = process.argv.at(3);
 const articleID = crypto.createHash('sha256').update(dayjs().valueOf().toString()).digest('hex').slice(0, 16);
 if (!articleName) {
   console.error('请提供文章名称，例如：pnpm newpost "第一篇文章"');
@@ -22,15 +24,12 @@ date: ${dayjs().format('YYYY-MM-DD HH:mm:ss')}
 cover: ""
 ---
 
-:::note
-文章描述
-:::
+${articleContent||""}
 
-### 标题1
 
 ![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=Nicholas003.blog.${articleID.slice(0, 16)}&format=true)
 
-::btn[按钮]{link="链接" type="info"}`;
+`;
 const init = async () => {
   // 写文件
   const now = dayjs();
